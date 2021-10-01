@@ -1,0 +1,12 @@
+name: Engarrafar
+version: '${project.version}'
+main: datrat.engarrafar.EngarrafarMain
+api-version: 1.16
+authors: [ DatRat ]
+description: Canalize seu XP diretamente a garrafas de forma simples!
+website: https://github.com/DatRatVS
+
+commands:
+  engarrafar:
+    description: Canalize níveis de experiência diretamente a garrafas!
+    usage: /engarrafar

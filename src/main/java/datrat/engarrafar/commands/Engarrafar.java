@@ -12,6 +12,8 @@ import org.bukkit.inventory.ItemStack;
 import java.util.List;
 
 import static datrat.engarrafar.EngarrafarMain.instance;
+import static datrat.engarrafar.sealconfig.SealConfigMain.config;
+import static datrat.engarrafar.strings.EngarrafarStrings.*;
 
 public class Engarrafar implements CommandExecutor {
 
@@ -20,7 +22,7 @@ public class Engarrafar implements CommandExecutor {
 		if (cmd.getName().equalsIgnoreCase("engarrafar")) {
 
 			if (!(sender instanceof Player)) {
-				sender.sendMessage("[Engarrafar] - O Console não pode usar o /engarrafar!");
+				sender.sendMessage(consoleUnable);
 				return true;
 			}
 
@@ -33,14 +35,14 @@ public class Engarrafar implements CommandExecutor {
 			player.setLevel(0);
 
 			if (bottlesToGive == 0) {
-				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + "Você não tem experiência o suficiente para engarrafar!");
+				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + insufficientExp);
 				return true;
 			}
 
 			if (bottlesToGive == 1) {
-				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + "Você engarrafou " + bottlesToGive + " bottle!");
+				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + youBottled + bottlesToGive + singularBottle);
 			} else {
-				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + "Você engarrafou " + bottlesToGive + " bottles!");
+				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + youBottled + bottlesToGive + pluralBottle);
 			}
 
 			List<ItemStack> bottles = Lists.newArrayList();

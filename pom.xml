@@ -6,7 +6,7 @@
 
     <groupId>datrat</groupId>
     <artifactId>engarrafar</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <name>Engarrafar</name>
@@ -63,6 +63,10 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+            <repository>
+                <id>jitpack.io</id>
+                <url>https://jitpack.io</url>
+            </repository>
     </repositories>
 
     <dependencies>
@@ -71,6 +75,11 @@
             <artifactId>paper-api</artifactId>
             <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.Seal-Island</groupId>
+            <artifactId>Seal-Config</artifactId>
+            <version>v1.3.0</version>
         </dependency>
     </dependencies>
 </project>

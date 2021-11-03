@@ -5,6 +5,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
 
+import static datrat.engarrafar.sealconfig.SealConfigMain.loadConfig;
+import static datrat.engarrafar.strings.EngarrafarStrings.onEnable;
+import static datrat.engarrafar.strings.EngarrafarStrings.selectedLangMessage;
+
 public final class EngarrafarMain extends JavaPlugin {
 
 	public static EngarrafarMain instance;
@@ -18,9 +22,13 @@ public final class EngarrafarMain extends JavaPlugin {
 
 		instance = this;
 
-		getLogger().info("[Engarrafar] - Engarrafando desde 1/10/21!");
+		loadConfig();
+
+		getLogger().info(selectedLangMessage);
+		getLogger().info(onEnable);
 
 		Objects.requireNonNull(this.getCommand("engarrafar")).setExecutor(new Engarrafar());
+
 	}
 
 	@Override

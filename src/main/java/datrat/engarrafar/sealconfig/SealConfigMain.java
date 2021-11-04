@@ -10,8 +10,8 @@ public class SealConfigMain {
 
 	@Comment("Define here your preferred Language\n" +
 					"Available Languages:\n" +
-					"pt_BR | en_US | custom_Lang")
-	public String lang = "pt_BR";
+					"en_US | pt_BR | custom_Lang")
+	public String lang = "en_US";
 
 	@Comment("Define here the tax you'll have to pay when bottling\n" +
 					"(Default: 8)\n" +
@@ -49,9 +49,11 @@ public class SealConfigMain {
 		saveConfig();
 	}
 
-	public static void reloadConfig() {
+	/*
+		public static void reloadConfig() {
 		sealConfig.reload();
 	}
+	*/
 
 	public static void saveConfig() {
 		sealConfig.save(config);

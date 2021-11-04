@@ -28,6 +28,7 @@ public final class EngarrafarMain extends JavaPlugin {
 		getLogger().info(onEnable);
 
 		Objects.requireNonNull(this.getCommand("engarrafar")).setExecutor(new Engarrafar());
+		Objects.requireNonNull(this.getCommand("bottleup")).setExecutor(new Engarrafar());
 
 	}
 

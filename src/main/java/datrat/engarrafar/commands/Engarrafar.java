@@ -31,12 +31,12 @@ public class Engarrafar implements CommandExecutor {
 
 			int bottlesToGive = playerExp / 8;
 
-			player.setExp(0);
-			player.setLevel(0);
-
 			if (bottlesToGive == 0) {
 				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + insufficientExp);
 				return true;
+			} else {
+				player.setExp(0);
+				player.setLevel(0);
 			}
 
 			if (bottlesToGive == 1) {

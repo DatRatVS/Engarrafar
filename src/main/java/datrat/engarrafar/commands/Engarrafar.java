@@ -40,9 +40,9 @@ public class Engarrafar implements CommandExecutor {
 			}
 
 			if (bottlesToGive == 1) {
-				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + youBottled + bottlesToGive + singularBottle);
+				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + youBottled + " " + bottlesToGive + " " + singularBottle);
 			} else {
-				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + youBottled + bottlesToGive + pluralBottle);
+				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + youBottled + " " + bottlesToGive + " " + pluralBottle);
 			}
 
 			List<ItemStack> bottles = Lists.newArrayList();

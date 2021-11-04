@@ -1,6 +1,5 @@
 package datrat.engarrafar.strings;
 
-
 import static datrat.engarrafar.sealconfig.SealConfigMain.config;
 
 public class EngarrafarStrings {

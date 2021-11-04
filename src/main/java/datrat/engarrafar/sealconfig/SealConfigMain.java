@@ -13,6 +13,11 @@ public class SealConfigMain {
 					"pt_BR | en_US | custom_Lang")
 	public String lang = "pt_BR";
 
+	@Comment("Define here the tax you'll have to pay when bottling\n" +
+					"(Default: 8)\n" +
+					"If less than 8, bottles can be duped.")
+	public int bottlingTax = 8;
+
 	@ConfigObject
 	public customLang customLanguageSetup = new customLang();
 	public static class customLang {
@@ -39,7 +44,7 @@ public class SealConfigMain {
 
 	public static void loadConfig() {
 		sealConfig = new SealConfig();
-		config = sealConfig.getConfig(new File("./plugins/Engarrafar/language.json"), SealConfigMain.class);
+		config = sealConfig.getConfig(new File("./plugins/Engarrafar/config.json"), SealConfigMain.class);
 
 		saveConfig();
 	}

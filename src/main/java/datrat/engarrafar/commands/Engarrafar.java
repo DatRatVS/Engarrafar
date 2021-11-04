@@ -29,7 +29,7 @@ public class Engarrafar implements CommandExecutor {
 			Player player = (Player) sender;
 			int playerExp = Experience.getExp(player);
 
-			int bottlesToGive = playerExp / 8;
+			int bottlesToGive = playerExp / config.bottlingTax;
 
 			if (bottlesToGive == 0) {
 				player.sendMessage(ChatColor.RED + "" + ChatColor.ITALIC + insufficientExp);

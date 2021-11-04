@@ -23,7 +23,7 @@ public class SealConfigMain {
 	public static class customLang {
 
 		@Comment("Shows up when you don't have enough experience to use the command.")
-		public String insufficientExp = "You haven't sufficient experience to bottle them up!";
+		public String insufficientExp = "You don't have sufficient experience to bottle them up!";
 
 		@Comment("Shows up in \"You Bottled (x) Bottles!\".")
 		public String youBottled = "You bottled";

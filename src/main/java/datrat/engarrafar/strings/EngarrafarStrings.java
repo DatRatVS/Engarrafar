@@ -42,7 +42,7 @@ public class EngarrafarStrings {
 
 		} else {
 
-			insufficientExp = "You haven't sufficient experience to bottle them up!";
+			insufficientExp = "You don't have sufficient experience to bottle them up!";
 			youBottled = "You bottled";
 			singularBottle = "bottle!";
 			pluralBottle = "bottles!";
